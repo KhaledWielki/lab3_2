@@ -11,11 +11,15 @@ import static org.powermock.api.mockito.PowerMockito.*;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
 
+@PrepareForTest ({NewsReaderFactory.class, ConfigurationLoader.class, PublishableNews.class})
+@RunWith(PowerMockRunner.class)
+
 public class NewsLoaderUnitTests {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
+	private NewsLoader newsLoader;
+	private IncomingNews incomingNews = new IncomingNews();
+	private IncomingInfo incomingInfoPublishable = new IncomingInfo("incomingInfoPublishable", SubsciptionType.NONE);
+	private IncomingInfo incomingInfoSubscriptionA = new IncomingInfo("incomingInfoSubsubscriptionA", SubsciptionType.A);
+	
 
 }
