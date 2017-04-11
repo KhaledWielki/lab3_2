@@ -72,4 +72,11 @@ public class NewsLoaderUnitTests {
 		assertThat(publicContent.size(),is(not(0)));
 		assertThat(publicContent.get(0), is(equalTo("text1")));
 	}
+	
+	@Test
+	 public void behaviourCaseTest() {
+  		PublishableNews result = newsLoader.loadNews();
+  		
+  		verify(mockConfigurationLoader, times(1)).loadConfiguration();
+ 	}
 }
